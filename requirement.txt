@@ -1,1 +1,2 @@
 opencv-python
+pick-1.2.0
