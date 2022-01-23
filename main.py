@@ -21,11 +21,11 @@ def create_vid(name, out_dir, frames):
 
 
 def main() -> None:
-    folder: str = "test"
+    folder: str = input("folder name?\n")
     frames: list[str] = [os.path.join(folder, file) for file in os.listdir(folder) if file.find(".jpg") > 0]
-    interval: int = 10 + 1
+    interval: int = int(input("photo interval?\n")) + 1
     frame_lists = {}
-    video_name = "test.avi"
+    video_name = input("video name?\n") + ".avi"
     output_folder: str = "output"
     previous_time = os.stat(frames[0]).st_ctime
     video_key = str(datetime.datetime.fromtimestamp(previous_time))
